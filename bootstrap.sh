@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 function dotfiles() {
-	rsync --exclude ".git/" --exclude "bootstrap.sh" --exclude "README.md" --exclude "LICENSE" --archive --verbose --human-readable "$@" ./ $HOME/
+	rsync --exclude ".git/" --exclude "bootstrap.sh" --exclude "README.md" --exclude "LICENSE" --no-perms --archive --verbose --human-readable "$@" ./ $HOME/
 }
 
 echo "--> Getting the hottest dotfiles, right off the press"

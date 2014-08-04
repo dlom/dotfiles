@@ -1,6 +1,7 @@
 # generic stuff
 autoload -U compinit && compinit
 autoload -U colors && colors
+autoload -U run-help && unalias run-help
 
 # aliases, aur helpers, git helpers, and keybindings
 source $HOME/.zsh/aliases.zsh

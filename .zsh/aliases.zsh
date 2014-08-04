@@ -5,6 +5,8 @@ alias halt="systemctl halt"
 alias suspend="systemctl suspend"
 alias hibernate="systemctl hibernate"
 
+alias help="run-help"
+
 alias sudo="sudo "
 
 alias ..="cd .."

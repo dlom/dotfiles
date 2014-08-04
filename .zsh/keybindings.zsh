@@ -22,3 +22,4 @@ source $HOME/.zkbd/$TERM-${${DISPLAY:t}:-$VENDOR-$OSTYPE}
 [[ -n "${key[Right]}" ]] && bindkey "${key[Right]}" forward-char
 [[ -n "${key[PageUp]}" ]] && bindkey "${key[PageUp]}" beginning-of-buffer-or-history
 [[ -n "${key[PageDwn]}" ]] && bindkey "${key[PageDwn]}" end-of-buffer-or-history
+[[ -n "${key[Shift+Tab]}" ]] && bindkey "${key[Shift+Tab]}" reverse-menu-complete

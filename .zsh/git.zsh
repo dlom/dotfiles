@@ -1,3 +1,4 @@
+# git prompt helpers
 # from https://github.com/robbyrussell/oh-my-zsh/blob/master/lib/git.zsh
 
 # get the name of the branch we are on

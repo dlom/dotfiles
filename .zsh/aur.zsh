@@ -6,12 +6,12 @@ function auri() {
 	popd -q
 }
 
-# prints out aur packages that need updating
+# checks and prints out aur packages that need updating
 function aurc() {
 	package-query --aur --foreign --format "%n %v" | comm - <(package-query --aur --foreign --format "%n %V") -23 | awk '{print $1}'
 }
 
 # updates ALL out of date aur packages
 function auru() {
-	aurc | xargs auri --needed
+	auri --needed $(aurc)
 }

@@ -16,8 +16,8 @@ else
 	read "REPLY?--> You really wanna do this? "
 	if [[ $REPLY =~ ^[Yy]$ ]]; then
 		dotfiles
-		source $HOME/.zshrc
 		echo "--> Job's done"
+		echo "--> do a \"source ~/.zshrc\"!"
 	else
 		echo "--> Nothing happened!"
 	fi

@@ -1,7 +1,7 @@
 # aur helpers
 # installs all arguments (no aur dep checking)
 function auri() {
-	pushd -q `mktemp -d`
+	pushd -q $(mktemp -d)
 	bash <(curl aur.sh --silent) --syncdeps --install "$@"
 	popd -q
 }

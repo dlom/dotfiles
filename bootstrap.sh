@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 function dotfiles() {
-	rsync --exclude ".git/" --exclude "bootstrap.sh" --exclude "README.md" --exclude "LICENSE" --no-perms --archive --verbose --human-readable "$@" ./ $HOME/
+	rsync --exclude ".git/" --exclude "bootstrap.sh" --exclude "README.md" --exclude "LICENSE" --no-perms --archive --verbose --checksum --human-readable "$@" ./ $HOME/
 }
 
 if [[ "$1" == "--yes" || "$1" == "-y" ]]; then

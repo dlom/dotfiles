@@ -8,7 +8,7 @@ function auri() {
 
 # checks and prints out aur packages that need updating
 function aurc() {
-	package-query --aur --foreign --format "%n %v" | comm - <(package-query --aur --foreign --format "%n %V") -23 | awk '{print $1}'
+	package-query --aur --upgrades --format "%n"
 }
 
 # updates ALL out of date aur packages

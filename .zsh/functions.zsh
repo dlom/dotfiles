@@ -7,7 +7,7 @@ function say() {
 # open file or pipe to browser
 function browser() {
 	if [[ ! -t 0 ]]; then;
-		local browserfile=$(mktemp --tmpdir tmp.XXXXXXXXXX.browser)
+		local browserfile=$(mktemp --tmpdir tmp.XXXXXXXXXX.browser.html)
 		cat > $browserfile
 		$BROWSER $browserfile "$@"
 	else
@@ -15,6 +15,7 @@ function browser() {
 	fi
 }
 
+# render markdown and display in browser
 function md() {
 	markdown "$1" | browser
 }

@@ -13,7 +13,7 @@ todo
    - [x] prompt
  - [x] gtk2
  - [x] X
- - [ ] Sublime Text
+ - [X] Sublime Text 3
  - [ ] awesome
- - [ ] git
+ - [X] git
  - [ ] ???

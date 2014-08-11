@@ -1,0 +1,25 @@
+[user]
+	name = Mark Old
+	email = dlom234@gmail.com
+[alias]
+	ignore = update-index --assume-unchanged
+[alias]
+	unignore = update-index --no-assume-unchanged
+[alias]
+	s = status
+[alias]
+	l = log
+[alias]
+	c = commit
+[alias]
+	cm = commit -m
+[alias]
+	a = add
+[alias]
+	d = diff
+[color]
+	ui = true
+[diff]
+	algorithm = patience
+[push]
+	default = simple

@@ -4,18 +4,18 @@ autoload -U colors && colors
 autoload -U run-help && unalias run-help
 setopt PROMPT_SUBST # very important for prompt
 
-# aliases, aur helpers, git helpers, and keybindings
-source $HOME/.zsh/aliases.zsh
-source $HOME/.zsh/aur.zsh
-source $HOME/.zsh/git.zsh
-source $HOME/.zsh/keybindings.zsh
-
 # env variables for interactive sessions
 HISTSIZE=1000
 SAVEHIST=$HISTSIZE
 HISTFILE=$HOME/.zsh_history
 EDITOR=nano
 PAGER=less
+
+# aliases, aur helpers, git helpers, and keybindings
+source $HOME/.zsh/aliases.zsh
+source $HOME/.zsh/aur.zsh
+source $HOME/.zsh/git.zsh
+source $HOME/.zsh/keybindings.zsh
 
 function prompt_char() {
 	[[ $(whoami) == "root" ]] && echo "#" && return

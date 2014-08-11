@@ -11,9 +11,13 @@ alias sudo="sudo "
 
 alias ..="cd .."
 alias ...="cd ../.."
+alias ....="cd ../../.."
 
 alias ls="ls --color=auto"
 alias la="ls -lah"
 alias ll="ls -lh"
 
 alias grep="grep --color=auto"
+
+alias edit="$EDITOR"
+alias pager="$PAGER"

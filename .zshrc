@@ -14,6 +14,7 @@ PAGER=less
 # aliases, aur helpers, git helpers, and keybindings
 source $HOME/.zsh/aliases.zsh
 source $HOME/.zsh/aur.zsh
+source $HOME/.zsh/functions.zsh
 source $HOME/.zsh/git.zsh
 source $HOME/.zsh/keybindings.zsh
 

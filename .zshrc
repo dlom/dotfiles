@@ -10,6 +10,7 @@ SAVEHIST=$HISTSIZE
 HISTFILE=$HOME/.zsh_history
 EDITOR=nano
 PAGER=less
+BROWSER=firefox
 
 # aliases, aur helpers, git helpers, and keybindings
 source $HOME/.zsh/aliases.zsh

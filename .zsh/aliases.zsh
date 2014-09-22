@@ -22,6 +22,8 @@ alias ll="ls -lh"
 
 alias grep="grep --color=auto"
 
+alias vim="vim -p"
+
 alias edit="$EDITOR"
 alias pager="$PAGER"
 # alias browser="$BROWSER" (see functions.zsh)

@@ -8,7 +8,7 @@ setopt PROMPT_SUBST # very important for prompt
 HISTSIZE=1000
 SAVEHIST=$HISTSIZE
 HISTFILE=$HOME/.zsh_history
-EDITOR=nano
+EDITOR="vim -p"
 PAGER=less
 BROWSER=firefox
 

@@ -12,6 +12,8 @@ alias help="run-help"
 
 alias sudo="sudo "
 
+alias mkdir="mkdir -p"
+
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."

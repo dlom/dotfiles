@@ -9,7 +9,7 @@ function browser() {
 	if [[ ! -t 0 ]]; then;
 		local browserfile=$(mktemp --tmpdir tmp.XXXXXXXXXX.browser.html)
 		cat > $browserfile
-		$BROWSER $browserfile "$@"
+		$BROWSER "$browserfile" "$@"
 	else
 		$BROWSER "$1" "${@:2}"
 	fi

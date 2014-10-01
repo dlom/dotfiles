@@ -13,6 +13,12 @@ alias help="run-help"
 alias sudo="sudo "
 
 alias mkdir="mkdir -p"
+alias q="exit"
+alias :q="exit"
+alias c="clear"
+
+alias xclip="xclip -sel clip"
+alias copy="xclip"
 
 alias ..="cd .."
 alias ...="cd ../.."

@@ -5,7 +5,7 @@ autoload -U run-help && unalias run-help
 setopt PROMPT_SUBST # very important for prompt
 
 # env variables for interactive sessions
-HISTSIZE=1000
+HISTSIZE=50000
 SAVEHIST=$HISTSIZE
 HISTFILE=$HOME/.zsh_history
 EDITOR="vim -p"

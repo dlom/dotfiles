@@ -19,3 +19,8 @@ function browser() {
 function md() {
 	markdown "$1" | browser
 }
+
+# better tree
+function tree() {
+	/usr/bin/tree -C --dirsfirst "$@" | less -FRNX
+}

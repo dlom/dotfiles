@@ -9,7 +9,7 @@ HISTSIZE=50000
 SAVEHIST=$HISTSIZE
 HISTFILE=$HOME/.zsh_history
 EDITOR="vim -p"
-PAGER=less
+PAGER="less -N"
 BROWSER=firefox
 
 # aliases, aur helpers, git helpers, and keybindings

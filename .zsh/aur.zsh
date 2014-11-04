@@ -6,6 +6,11 @@ function auri() {
 	popd -q
 }
 
+# lists all aur packages
+function aurl() {
+	package-query --query --foreign --format "%n"
+}
+
 # checks and prints out aur packages that need updating
 function aurc() {
 	package-query --aur --upgrades --format "%n"

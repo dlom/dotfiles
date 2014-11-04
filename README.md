@@ -16,4 +16,5 @@ todo
  - [X] Sublime Text 3
  - [ ] awesome
  - [X] git
+ - [ ] vim
  - [ ] ???

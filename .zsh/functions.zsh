@@ -8,7 +8,7 @@ function say() {
 function browser() {
 	if [[ ! -t 0 ]]; then;
 		local browserfile=$(mktemp --tmpdir tmp.XXXXXXXXXX.browser.html)
-		cat > $browserfile
+		cat - > $browserfile
 		$BROWSER "$browserfile" "$@"
 	else
 		$BROWSER "$1" "${@:2}"
@@ -23,4 +23,9 @@ function md() {
 # better tree
 function tree() {
 	/usr/bin/tree -C --dirsfirst "$@" | less -FRNX
+}
+
+# strip colors
+function decolor() {
+	sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g"
 }

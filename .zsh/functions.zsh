@@ -17,7 +17,11 @@ function browser() {
 
 # render markdown and display in browser
 function md() {
-	markdown "$1" | browser
+	if [[ ! -t 0 ]]; then;
+		cat - | markdown "$@" | browser
+	else
+		markdown "$@" | browser
+	fi
 }
 
 # better tree

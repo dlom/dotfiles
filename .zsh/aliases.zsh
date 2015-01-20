@@ -18,7 +18,8 @@ alias :q="exit"
 alias c="clear"
 
 alias xclip="xclip -sel clip"
-alias copy="xclip"
+alias copy="xclip -i"
+alias paste="xclip -o" # THIS OVERWRITES /usr/bin/paste
 
 alias ..="cd .."
 alias ...="cd ../.."

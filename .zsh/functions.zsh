@@ -26,7 +26,7 @@ function md() {
 
 # better tree
 function tree() {
-	/usr/bin/tree -C --dirsfirst "$@" | less -FRNX
+	$(whence -p tree) -C --dirsfirst "$@" | less -FRNX
 }
 
 # strip colors

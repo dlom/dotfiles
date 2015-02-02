@@ -33,3 +33,12 @@ function tree() {
 function decolor() {
 	sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g"
 }
+
+# sets the terminal title
+function title() {
+    if [[ "$TERM" =~ "(xterm*|(u|)rxvt*)" ]]; then
+        printf "\e]2;%s\a" "${(V)argv}"
+    elif [[ "$TERM" =~ "screen*" ]]; then
+        printf "\ek%s\e\\" "${(V)argv}"
+    fi
+}

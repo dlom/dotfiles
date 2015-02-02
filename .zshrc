@@ -11,6 +11,7 @@ HISTFILE=$HOME/.zsh_history
 EDITOR="vim -p"
 PAGER="less -N"
 BROWSER=firefox
+PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 
 # aliases, aur helpers, git helpers, and keybindings
 source $HOME/.zsh/aliases.zsh

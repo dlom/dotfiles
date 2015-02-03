@@ -19,7 +19,7 @@ alias c="clear"
 
 alias xclip="xclip -sel clip"
 alias copy="xclip -i"
-alias paste="xclip -o" # THIS OVERWRITES /usr/bin/paste
+alias paste="xclip -o" # THIS OVERRIDES /usr/bin/paste
 
 alias dos2unix="sed 's/\r$//'"
 alias unix2dos="sed 's/$/\r/'"

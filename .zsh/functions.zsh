@@ -20,7 +20,7 @@ function md() {
 	if [[ ! -t 0 ]]; then;
 		cat - | markdown "$@" | browser
 	else
-		markdown "$@" | browser
+		markdown "$1" "${@:2}" | browser
 	fi
 }
 
@@ -32,6 +32,15 @@ function tree() {
 # strip colors
 function decolor() {
 	sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g"
+}
+
+# dos2unix and unix2dos
+function dos2unix() {
+    sed "s/\r$//"
+}
+
+function unix2dos() {
+    sed "s/$/\r/"
 }
 
 # sets the terminal title

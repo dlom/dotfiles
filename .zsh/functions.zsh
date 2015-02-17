@@ -24,9 +24,14 @@ function md() {
 	fi
 }
 
+# execute the actual binary instead of any aliases or functions
+function base() {
+    $(whence -p $1) "${@:2}"
+}
+
 # better tree
 function tree() {
-	$(whence -p tree) -C --dirsfirst "$@" | less -FRNX
+	base tree -C --dirsfirst "$@" | less -FRNX
 }
 
 # strip colors

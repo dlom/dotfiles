@@ -56,3 +56,10 @@ function title() {
         printf "\ek%s\e\\" "${(V)argv}"
     fi
 }
+
+# hash a password for WPA
+function wpa_hash() {
+	local pass
+	read -s pass
+	echo $pass | tr -d '[:space:]' | iconv -t utf16le | openssl md4 | cut -d ' ' -f2
+}

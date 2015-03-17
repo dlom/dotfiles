@@ -6,21 +6,29 @@ function say() {
 
 # open file or pipe to browser
 function browser() {
-	if [[ ! -t 0 ]]; then;
+	if [[ ! -t 0 ]]; then
 		local browserfile=$(mktemp --tmpdir tmp.XXXXXXXXXX.browser.html)
 		cat - > $browserfile
 		$BROWSER "$browserfile" "$@"
 	else
-		$BROWSER "$1" "${@:2}"
+		if [[ -n "$1" ]]; then
+			$BROWSER "$1" "${@:2}"
+		else
+			$BROWSER
+		fi
 	fi
 }
 
 # render markdown and display in browser
 function md() {
-	if [[ ! -t 0 ]]; then;
+	if [[ ! -t 0 ]]; then
 		cat - | markdown "$@" | browser
 	else
-		markdown "$1" "${@:2}" | browser
+		if [[ -n "$1" ]]; then
+			markdown "$1" "${@:2}" | browser
+		else
+			echo "Please specify a file or pipe from STDIN" >&2
+		fi
 	fi
 }
 
@@ -41,20 +49,20 @@ function decolor() {
 
 # dos2unix and unix2dos
 function dos2unix() {
-    sed "s/\r$//"
+	sed "s/\r$//"
 }
 
 function unix2dos() {
-    sed "s/$/\r/"
+	sed "s/$/\r/"
 }
 
 # sets the terminal title
 function title() {
-    if [[ "$TERM" =~ "(xterm*|(u|)rxvt*)" ]]; then
-        printf "\e]2;%s\a" "${(V)argv}"
-    elif [[ "$TERM" =~ "screen*" ]]; then
-        printf "\ek%s\e\\" "${(V)argv}"
-    fi
+	if [[ "$TERM" =~ "(xterm*|(u|)rxvt*)" ]]; then
+		printf "\e]2;%s\a" "${(V)argv}"
+	elif [[ "$TERM" =~ "screen*" ]]; then
+		printf "\ek%s\e\\" "${(V)argv}"
+	fi
 }
 
 # hash a password for WPA

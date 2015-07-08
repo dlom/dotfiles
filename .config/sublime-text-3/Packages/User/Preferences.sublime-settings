@@ -10,6 +10,7 @@
 	"theme": "Spacegray Eighties.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
+	"update_check": false,
 	"word_wrap": false,
-	"update_check": false
+	"folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", "node_modules"]
 }

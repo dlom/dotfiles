@@ -71,3 +71,8 @@ function wpa_hash() {
 	read -s pass
 	echo $pass | tr -d '[:space:]' | iconv -t utf16le | openssl md4 | cut -d ' ' -f2
 }
+
+# better cp
+function cp() {
+	rsync --archive --human-readable --progress "$@"
+}

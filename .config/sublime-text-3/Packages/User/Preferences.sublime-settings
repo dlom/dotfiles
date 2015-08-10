@@ -1,6 +1,14 @@
 {
 	"color_scheme": "Packages/Theme - Spacegray/base16-eighties.dark.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
+	"folder_exclude_patterns":
+	[
+		".svn",
+		".git",
+		".hg",
+		"CVS",
+		"node_modules"
+	],
 	"ignored_packages":
 	[
 		"Vintage",
@@ -11,6 +19,5 @@
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"update_check": false,
-	"word_wrap": false,
-	"folder_exclude_patterns": [".svn", ".git", ".hg", "CVS", "node_modules"]
+	"word_wrap": false
 }

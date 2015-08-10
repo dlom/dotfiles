@@ -5,9 +5,6 @@ autoload -U down-line-or-beginning-search
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 
-# gnome-terminal tries to be xterm and it breaks things
-[[ $COLORTERM == "gnome-terminal" ]] && export TERM=rxvt-unicode
-
 # keybindings
 [[ ! -e $HOME/.zkbd/$TERM-${${DISPLAY:t}:-$VENDOR-$OSTYPE} ]] && zkbd
 source $HOME/.zkbd/$TERM-${${DISPLAY:t}:-$VENDOR-$OSTYPE}

@@ -1,8 +1,20 @@
 # aur helpers
+# downloads and runs makepkg on all arguments (adapted from http://aur.sh)
+function aur() {
+    local d=${BUILDDIR:-$PWD}
+    local p
+    for p in ${@:#-*}; do
+        cd "$d"
+        curl "https://aur.archlinux.org/cgit/aur.git/snapshot/$p.tar.gz" | tar xz
+        cd "$p"
+        makepkg ${@:#[^\-]*}
+    done
+}
+
 # installs all arguments (no aur dep checking)
 function auri() {
-	pushd -q $(mktemp --directory --tmpdir tmp.XXXXXXXXXX.pacman)
-	bash <(curl aur.sh --silent) --syncdeps --install "$@"
+	pushd -q $(mktemp --directory --tmpdir tmp.XXXXXXXXXX.aur)
+	aur --syncdeps --install "$@"
 	popd -q
 }
 

@@ -73,6 +73,6 @@ function wpa_hash() {
 }
 
 # better cp
-function cp() {
+function cpr() {
 	rsync --archive --human-readable --progress "$@"
 }

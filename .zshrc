@@ -36,3 +36,6 @@ ZSH_THEME_GIT_PROMPT_DIRTY=" [%{$fg_no_bold[red]%}✗"
 ZSH_THEME_GIT_PROMPT_CLEAN=" [%{$fg_no_bold[green]%}✓"
 # must be single quotes for prompt expansion
 PROMPT='%{$fg_bold[red]%}%n%{$reset_color%} at %{$fg_bold[yellow]%}%m%{$reset_color%} in %{$fg_bold[green]%}%~%{$reset_color%} $(git_prompt_info)%{$fg_bold[white]%}$(prompt_char)%{$reset_color%} '
+
+# set terminal title
+title "Terminal"

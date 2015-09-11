@@ -3,7 +3,7 @@ autoload -U compinit && compinit
 autoload -U colors && colors
 autoload -U run-help && unalias run-help
 setopt PROMPT_SUBST # very important for prompt
-setopt NOHASHDIRS NOHASHCMDS
+zstyle ":completion:*" rehash true
 
 # env variables for interactive sessions
 HISTSIZE=50000

@@ -11,13 +11,14 @@
 	],
 	"ignored_packages":
 	[
-		"Vintage",
-		"Makefile"
+		"Makefile",
+		"Vintage"
 	],
 	"tab_size": 4,
 	"theme": "Spacegray Eighties.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
+	"typescript_plugin_tsc_version": "1.7.2",
 	"update_check": false,
 	"word_wrap": false
 }

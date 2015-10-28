@@ -1,4 +1,5 @@
 {
+	"bootstrapped": true,
 	"in_process_packages":
 	[
 	],
@@ -9,6 +10,7 @@
 		"GitGutter",
 		"Makefile Improved",
 		"Package Control",
-		"Theme - Spacegray"
+		"Theme - Spacegray",
+		"TypeScript"
 	]
 }

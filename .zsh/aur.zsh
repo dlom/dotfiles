@@ -20,7 +20,7 @@ function auri() {
 
 # lists all aur packages
 function aurl() {
-	package-query --query --foreign --format "%n"
+	pacman --query --foreign --quiet
 }
 
 # checks and prints out aur packages that need updating

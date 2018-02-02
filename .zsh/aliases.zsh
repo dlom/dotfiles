@@ -37,3 +37,5 @@ alias less="less -N"
 alias edit="$EDITOR"
 alias pager="$PAGER"
 # alias browser="$BROWSER" (see functions.zsh)
+
+alias weather="curl wttr.in"

@@ -11,7 +11,7 @@ SAVEHIST=$HISTSIZE
 HISTFILE=$HOME/.zsh_history
 EDITOR="vim -p"
 PAGER="less -N"
-BROWSER=firefox
+BROWSER=firefox-nightly
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 
 # aliases, aur helpers, git helpers, and keybindings
@@ -20,6 +20,9 @@ source $HOME/.zsh/aur.zsh
 source $HOME/.zsh/functions.zsh
 source $HOME/.zsh/git.zsh
 source $HOME/.zsh/keybindings.zsh
+
+# ssh-agent and gpg-agent
+eval $(keychain --eval --quiet --agents ssh,gpg id_rsa dlom234@gmail.com)
 
 function prompt_char() {
 	[[ $(whoami) == "root" ]] && echo "#" && return

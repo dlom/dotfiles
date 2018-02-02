@@ -9,8 +9,10 @@
 		"CVS",
 		"node_modules"
 	],
+	"font_face": "Fira Code",
 	"ignored_packages":
 	[
+		"0_package_control_loader",
 		"Makefile",
 		"Vintage"
 	],
@@ -18,7 +20,7 @@
 	"theme": "Spacegray Eighties.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
-	"typescript_plugin_tsc_version": "1.7.2",
+	"typescript_plugin_tsc_version": "1.7.3",
 	"update_check": false,
 	"word_wrap": false
 }

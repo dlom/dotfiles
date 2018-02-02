@@ -5,11 +5,13 @@
 	],
 	"installed_packages":
 	[
+		"ARM Assembly",
 		"C Improved",
 		"DoxyDoc",
 		"GitGutter",
 		"Makefile Improved",
 		"Package Control",
+		"Print to HTML",
 		"Theme - Spacegray",
 		"TypeScript"
 	]

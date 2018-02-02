@@ -1,4 +1,9 @@
 # random functions
+# say
+say () {
+	cvlc "https://translate.google.com/translate_tts?ie=UTF-8&tl=en-US&client=tw-ob&q=$*" --play-and-exit --quiet 2> /dev/null
+}
+
 # open file or pipe to browser
 function browser() {
 	if [[ ! -t 0 ]]; then

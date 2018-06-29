@@ -1,6 +1,7 @@
 [user]
 	name = Mark Old
 	email = dlom234@gmail.com
+	signingkey = DE9CE941C4AD4988
 [alias]
 	ignore = update-index --assume-unchanged
 [alias]
@@ -17,6 +18,8 @@
 	a = add
 [alias]
 	d = diff
+[alias]
+	review = diff --cached
 [color]
 	ui = true
 [diff]
@@ -25,3 +28,5 @@
 	default = simple
 [pull]
 	rebase = true
+[commit]
+	gpgsign = true

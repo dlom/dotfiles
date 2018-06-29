@@ -1,0 +1,31 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "typescript.tsdk": "/home/mark/.config/yarn/global/node_modules/typescript/lib",
+    "files.exclude": {
+        "**/*.js": { "when": "$(basename).ts" },
+        "**/*.js.map": true,
+        "node_modules/": true,
+        "**/*.class": true,
+        "coverage/": { "when": ".travis.yml" },
+        ".nyc_output/": true,
+        "dist": { "when": "package.json" },
+        "lib": { "when": "src" },
+        "bin": { "when": "Makefile" },
+        "build": { "when": "Makefile" },
+        "**/*.o": { "when": "$(basename).c" },
+        "elm-stuff": true,
+        "elm.js": { "when": "elm-stuff" }
+    },
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "todohighlight.isEnable": false,
+    "extensions.ignoreRecommendations": false,
+    "java.errors.incompleteClasspath.severity": "ignore",
+    "editor.fontFamily": "'Fira Code Medium', 'Droid Sans Mono', 'Courier New', monospace, 'Droid Sans Fallback'",
+    "editor.fontLigatures": true,
+    "javascript.implicitProjectConfig.checkJs": true,
+    "xo.enable": true,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "editor.rulers": [80],
+    "javascript.nameSuggestions": false
+}

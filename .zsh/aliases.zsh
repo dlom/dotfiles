@@ -39,3 +39,5 @@ alias pager="$PAGER"
 # alias browser="$BROWSER" (see functions.zsh)
 
 alias weather="curl wttr.in"
+
+alias serve="python -m http.server"

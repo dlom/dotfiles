@@ -6,13 +6,14 @@ setopt PROMPT_SUBST # very important for prompt
 zstyle ":completion:*" rehash true
 
 # env variables for interactive sessions
-HISTSIZE=50000
+HISTSIZE=1000000
 SAVEHIST=$HISTSIZE
 HISTFILE=$HOME/.zsh_history
 EDITOR="vim -p"
 PAGER="less -N"
 BROWSER=firefox-nightly
-PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+PATH="$(ruby -e 'print Gem.user_dir')/bin:$(yarn global bin):$PATH"
+GEM_HOME="$(ruby -e 'print Gem.user_dir')"
 
 # aliases, aur helpers, git helpers, and keybindings
 source $HOME/.zsh/aliases.zsh

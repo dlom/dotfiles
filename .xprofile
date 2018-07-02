@@ -1,0 +1,5 @@
+#!/bin/sh
+dex -a
+export EDITOR=code
+exec >> ~/.cache/$1/stdout
+exec 2>> ~/.cache/$1/stderr

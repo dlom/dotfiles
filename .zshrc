@@ -23,7 +23,7 @@ source $HOME/.zsh/git.zsh
 source $HOME/.zsh/keybindings.zsh
 
 # ssh-agent and gpg-agent
-eval $(keychain --eval --quiet --agents ssh,gpg id_rsa dlom234@gmail.com)
+eval $(keychain --eval --quiet --agents ssh,gpg id_rsa_work id_rsa_personal dlom234@gmail.com)
 
 function prompt_char() {
 	[[ $(whoami) == "root" ]] && echo "#" && return

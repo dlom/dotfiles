@@ -1,25 +1,17 @@
 [user]
 	name = Mark Old
 	email = dlom234@gmail.com
-	signingkey = DE9CE941C4AD4988
+	signingkey = 4415BCB584603E6A
 [alias]
 	ignore = update-index --assume-unchanged
-[alias]
 	unignore = update-index --no-assume-unchanged
-[alias]
 	s = status
-[alias]
 	l = log
-[alias]
 	c = commit
-[alias]
 	cm = commit -m
-[alias]
 	a = add
-[alias]
 	d = diff
-[alias]
-	review = diff --cached
+	r = diff --cached
 [color]
 	ui = true
 [diff]
@@ -28,5 +20,11 @@
 	default = simple
 [pull]
 	rebase = true
+[url "git@git.dev.kochava.com:"]
+    insteadOf = "https://git.dev.kochava.com"
+[url "git@github.com:"]
+	insteadOf = "https://github.com"
+[includeIf "gitdir:~/go/src/git.dev.kochava.com/"]
+	path = ~/.gitconfig-work
 [commit]
 	gpgsign = true

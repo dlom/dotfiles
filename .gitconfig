@@ -21,7 +21,7 @@
 [pull]
 	rebase = true
 [url "git@git.dev.kochava.com:"]
-    insteadOf = "https://git.dev.kochava.com"
+	insteadOf = "https://git.dev.kochava.com"
 [url "git@github.com:"]
 	insteadOf = "https://github.com"
 [includeIf "gitdir:~/go/src/git.dev.kochava.com/"]

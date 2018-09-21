@@ -22,10 +22,10 @@ function browser() {
 # render markdown and display in browser
 function md() {
 	if [[ ! -t 0 ]]; then
-		cat - | markdown "$@" | browser
+		cat - | $MARKDOWN "$@" | browser
 	else
 		if [[ -n "$1" ]]; then
-			markdown "$1" "${@:2}" | browser
+			$MARKDOWN "$1" "${@:2}" | browser
 		else
 			echo "Please specify a file or pipe from STDIN" >&2
 		fi

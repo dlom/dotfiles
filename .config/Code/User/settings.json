@@ -14,7 +14,8 @@
         "build": { "when": "Makefile" },
         "**/*.o": { "when": "$(basename).c" },
         "elm-stuff": true,
-        "elm.js": { "when": "elm-stuff" }
+        "elm.js": { "when": "elm-stuff" },
+        "target": { "when": "Cargo.toml" }
     },
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
@@ -26,6 +27,12 @@
     "javascript.implicitProjectConfig.checkJs": true,
     "xo.enable": true,
     "editor.multiCursorModifier": "ctrlCmd",
-    "editor.rulers": [80],
-    "javascript.nameSuggestions": false
+    "editor.rulers": [
+        80
+    ],
+    "javascript.nameSuggestions": false,
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "Base16 Eighties Dark",
+    "window.zoomLevel": 0,
+    "breadcrumbs.enabled": true
 }

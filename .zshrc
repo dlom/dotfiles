@@ -3,16 +3,18 @@ autoload -U compinit && compinit
 autoload -U colors && colors
 autoload -U run-help && unalias run-help
 setopt PROMPT_SUBST # very important for prompt
+setopt interactivecomments
 zstyle ":completion:*" rehash true
 
 # env variables for interactive sessions
 HISTSIZE=1000000
 SAVEHIST=$HISTSIZE
 HISTFILE=$HOME/.zsh_history
-EDITOR="vim -p"
+EDITOR="nvim"
 PAGER="less -N"
 BROWSER=firefox-nightly
-PATH="$(ruby -e 'print Gem.user_dir')/bin:$(yarn global bin):$PATH"
+MARKDOWN=cmark-gfm
+PATH="$(ruby -e 'print Gem.user_dir')/bin:$(yarn global bin):$(go env GOPATH)/bin:$PATH"
 GEM_HOME="$(ruby -e 'print Gem.user_dir')"
 
 # aliases, aur helpers, git helpers, and keybindings

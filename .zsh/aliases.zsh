@@ -31,7 +31,7 @@ alias ll="ls -lh"
 
 alias grep="grep --color=auto"
 
-alias vim="vim -p"
+alias vim="nvim"
 alias less="less -N"
 
 alias edit="$EDITOR"

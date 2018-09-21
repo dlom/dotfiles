@@ -1,5 +1,7 @@
 #!/bin/sh
 dex -a
 export EDITOR=code
+export QT_AUTO_SCREEN_SCALE_FACTOR=0
+export QT_QPA_PLATFORMTHEME=gtk2
 exec >> ~/.cache/$1/stdout
 exec 2>> ~/.cache/$1/stderr

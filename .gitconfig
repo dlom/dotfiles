@@ -22,9 +22,21 @@
 	rebase = true
 [url "git@git.dev.kochava.com:"]
 	insteadOf = "https://git.dev.kochava.com"
-[url "git@github.com:"]
-	insteadOf = "https://github.com"
 [includeIf "gitdir:~/go/src/git.dev.kochava.com/"]
 	path = ~/.gitconfig-work
 [commit]
 	gpgsign = true
+[core]
+	page = diff-so-fancy | less --tabs=4 -RFX
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = yellow
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse

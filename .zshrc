@@ -14,6 +14,7 @@ EDITOR="nvim"
 PAGER="less -N"
 BROWSER=firefox-nightly
 MARKDOWN=cmark-gfm
+GOPATH=$HOME/go
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$(yarn global bin):$(go env GOPATH)/bin:$PATH"
 GEM_HOME="$(ruby -e 'print Gem.user_dir')"
 

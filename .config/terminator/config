@@ -6,6 +6,7 @@
   scroll_tabbar = True
 [keybindings]
   full_screen = None
+  help = None
 [layouts]
   [[default]]
     [[[child1]]]

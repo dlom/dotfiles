@@ -1,6 +1,6 @@
 typeset -g -A key
 
-key[F1]=''''
+key[F1]='^[OP'
 key[F2]='^[OQ'
 key[F3]='^[OR'
 key[F4]='^[OS'
@@ -24,3 +24,8 @@ key[Left]='^[[D'
 key[Down]='^[[B'
 key[Right]='^[[C'
 key[Menu]=''''
+key[Shift+Tab]='^[[Z'
+key[Ctrl+Up]='^[[1;5A'
+key[Ctrl+Left]='^[[1;5D'
+key[Ctrl+Down]='^[[1;5B'
+key[Ctrl+Right]='^[[1;5C'

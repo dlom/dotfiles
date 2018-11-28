@@ -24,7 +24,6 @@
     "java.errors.incompleteClasspath.severity": "ignore",
     "editor.fontFamily": "'Fira Code Medium', 'Droid Sans Mono', 'Courier New', monospace, 'Droid Sans Fallback'",
     "editor.fontLigatures": true,
-    "javascript.implicitProjectConfig.checkJs": true,
     "xo.enable": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.rulers": [

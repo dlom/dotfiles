@@ -2,20 +2,34 @@
 {
     "typescript.tsdk": "/home/mark/.config/yarn/global/node_modules/typescript/lib",
     "files.exclude": {
-        "**/*.js": { "when": "$(basename).ts" },
-        "**/*.js.map": true,
-        "node_modules/": true,
-        "**/*.class": true,
-        "coverage/": { "when": ".travis.yml" },
         ".nyc_output/": true,
-        "dist": { "when": "package.json" },
-        "lib": { "when": "src" },
-        "bin": { "when": "Makefile" },
-        "build": { "when": "Makefile" },
-        "**/*.o": { "when": "$(basename).c" },
+        "**/*.class": true,
+        "**/*.js": {
+            "when": "$(basename).ts"
+        },
+        "**/*.js.map": true,
+        "**/*.o": true,
+        "**/lib*.a": true,
+        "build": {
+            "when": "Makefile"
+        },
+        "coverage/": {
+            "when": ".travis.yml"
+        },
+        "dist": {
+            "when": "package.json"
+        },
         "elm-stuff": true,
-        "elm.js": { "when": "elm-stuff" },
-        "target": { "when": "Cargo.toml" }
+        "elm.js": {
+            "when": "elm-stuff"
+        },
+        "lib": {
+            "when": "src"
+        },
+        "node_modules/": true,
+        "target": {
+            "when": "Cargo.toml"
+        }
     },
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
@@ -24,14 +38,27 @@
     "java.errors.incompleteClasspath.severity": "ignore",
     "editor.fontFamily": "'Fira Code Medium', 'Droid Sans Mono', 'Courier New', monospace, 'Droid Sans Fallback'",
     "editor.fontLigatures": true,
-    "xo.enable": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.rulers": [
         80
     ],
-    "javascript.nameSuggestions": false,
-    "workbench.iconTheme": "vscode-icons",
     "workbench.colorTheme": "Base16 Eighties Dark",
     "window.zoomLevel": 0,
-    "breadcrumbs.enabled": true
+    "breadcrumbs.enabled": true,
+    "window.titleBarStyle": "native",
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/**"
+    ],
+    "C_Cpp.default.cStandard": "c99",
+    "files.associations": {
+        "*.h": "c"
+    },
+    "C_Cpp.default.defines": [
+        "_DEFAULT_SOURCE"
+    ],
+    "editor.renderControlCharacters": false,
+    "editor.renderWhitespace": "all",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "go.installDependenciesWhenBuilding": false,
 }

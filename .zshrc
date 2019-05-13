@@ -10,12 +10,13 @@ zstyle ":completion:*" rehash true
 HISTSIZE=1000000
 SAVEHIST=$HISTSIZE
 HISTFILE=$HOME/.zsh_history
-EDITOR="nvim"
+export EDITOR="nvim"
 PAGER="less -N"
+export CC=clang
 BROWSER=firefox-nightly
 MARKDOWN=cmark-gfm
 GOPATH=$HOME/go
-PATH="$(ruby -e 'print Gem.user_dir')/bin:$(yarn global bin):$(go env GOPATH)/bin:$PATH"
+PATH="$(ruby -e 'print Gem.user_dir')/bin:$(yarn global bin --offline):$(go env GOPATH)/bin:$PATH"
 GEM_HOME="$(ruby -e 'print Gem.user_dir')"
 
 # aliases, aur helpers, git helpers, and keybindings

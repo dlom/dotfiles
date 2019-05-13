@@ -76,3 +76,12 @@ function wpa_hash() {
 function cpr() {
 	rsync --archive --human-readable --progress "$@"
 }
+
+# cod e.
+function cod() {
+	if [[ $1 = 'e.' ]]; then
+		code .
+	else
+		echo A large marine fish with a small barbel on the chin.
+	fi
+}

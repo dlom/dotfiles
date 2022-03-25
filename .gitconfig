@@ -21,13 +21,20 @@
 [pull]
 	rebase = true
 [url "git@git.dev.kochava.com:"]
-	insteadOf = "https://git.dev.kochava.com"
+	insteadOf = "https://git.dev.kochava.com/"
+[url "ssh://git@github.com/"]
+	insteadOf = "https://github.com/"
 [includeIf "gitdir:~/go/src/git.dev.kochava.com/"]
 	path = ~/.gitconfig-work
+[includeIf "gitdir:~/gitwork/"]
+	path = ~/.gitconfig-work
+[includeIf "gitdir:~/gitalt/"]
+	path = ~/.gitconfig-alt
 [commit]
 	gpgsign = true
 [core]
 	page = diff-so-fancy | less --tabs=4 -RFX
+	excludesfile = /home/mark/.gitignore-global
 [color "diff-highlight"]
 	oldNormal = red bold
 	oldHighlight = red bold 52

@@ -85,3 +85,30 @@ function cod() {
 		echo A large marine fish with a small barbel on the chin.
 	fi
 }
+
+function sops-clean() {
+	local FILES=$(find . -ipath '*/secrets/*.yaml' | grep -v .enc.yaml)
+
+	for i in $FILES; do
+		rm $i
+	done
+}
+
+function sops-decrypt() {
+	local FILES=$(find . -ipath '*/secrets/*.yaml' | grep .enc.yaml)
+
+	for i in $FILES; do
+		local NEW_FILENAME=$(echo -n "$i" | sed 's/enc.yaml/yaml/g')
+		sops --decrypt $i > $NEW_FILENAME
+	done
+}
+
+function sops-encrypt() {
+	local FILES=$(find . -ipath '*/secrets/*.yaml' | grep -v .enc.yaml)
+
+	for i in $FILES; do
+		local NEW_FILENAME=$(echo -n "$i" | sed 's/yaml/enc.yaml/g')
+		sops --encrypt $i > $NEW_FILENAME || exit 1;
+		rm $i
+	done
+}

@@ -11,13 +11,16 @@ HISTSIZE=1000000
 SAVEHIST=$HISTSIZE
 HISTFILE=$HOME/.zsh_history
 export EDITOR="nvim"
-PAGER="less -N"
 export CC=clang
-BROWSER=firefox-nightly
-MARKDOWN=cmark-gfm
-GOPATH=$HOME/go
-PATH="$(ruby -e 'print Gem.user_dir')/bin:$(yarn global bin --offline):$(go env GOPATH)/bin:$PATH"
-GEM_HOME="$(ruby -e 'print Gem.user_dir')"
+export BROWSER=firefox-nightly
+export MARKDOWN=cmark-gfm
+export GEM_HOME="$(ruby -e 'print Gem.user_dir')"
+export CARGO_HOME="$HOME/.cargo"
+export PATH="$GEM_HOME/bin:$(yarn global bin --offline):$(go env GOPATH)/bin:$CARGO_HOME/bin:$PATH"
+export GOPRIVATE="github.com/Kochava,git.dev.kochava.com"
+
+export GITHUB_TOKEN=''
+export GITHUB_USERNAME='dlom'
 
 # aliases, aur helpers, git helpers, and keybindings
 source $HOME/.zsh/aliases.zsh
@@ -27,7 +30,7 @@ source $HOME/.zsh/git.zsh
 source $HOME/.zsh/keybindings.zsh
 
 # ssh-agent and gpg-agent
-eval $(keychain --eval --quiet --agents ssh,gpg id_rsa_work id_rsa_personal dlom234@gmail.com)
+eval $(keychain --eval --quiet --agents ssh,gpg id_rsa_personal id_rsa_alt id_rsa_work dlom234@gmail.com)
 
 function prompt_char() {
 	[[ $(whoami) == "root" ]] && echo "#" && return
@@ -47,3 +50,9 @@ PROMPT='%{$fg_bold[red]%}%n%{$reset_color%} at %{$fg_bold[yellow]%}%m%{$reset_co
 
 # set terminal title
 title "Terminal"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/mark/google-cloud-sdk/path.zsh.inc' ]; then . '/home/mark/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/mark/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/mark/google-cloud-sdk/completion.zsh.inc'; fi

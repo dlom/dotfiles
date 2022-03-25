@@ -33,6 +33,7 @@ alias grep="grep --color=auto"
 
 alias vim="nvim"
 alias less="less -N"
+alias subl="subl -a"
 
 alias edit="$EDITOR"
 alias pager="$PAGER"

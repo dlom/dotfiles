@@ -29,21 +29,23 @@
         "node_modules/": true,
         "target": {
             "when": "Cargo.toml"
-        }
+        },
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
     },
     "files.trimTrailingWhitespace": true,
     "files.insertFinalNewline": true,
     "todohighlight.isEnable": false,
     "extensions.ignoreRecommendations": false,
     "java.errors.incompleteClasspath.severity": "ignore",
-    "editor.fontFamily": "'Fira Code Medium', 'Droid Sans Mono', 'Courier New', monospace, 'Droid Sans Fallback'",
+    "editor.fontFamily": "'Cascadia Code', 'Fira Code Medium', 'Droid Sans Mono', 'Courier New', monospace, 'Droid Sans Fallback'",
     "editor.fontLigatures": true,
     "editor.multiCursorModifier": "ctrlCmd",
     "editor.rulers": [
         80
     ],
-    "workbench.colorTheme": "Base16 Eighties Dark",
-    "window.zoomLevel": 0,
     "breadcrumbs.enabled": true,
     "window.titleBarStyle": "native",
     "C_Cpp.default.includePath": [
@@ -61,4 +63,13 @@
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "go.installDependenciesWhenBuilding": false,
+    "go.formatTool": "goimports",
+    "editor.insertSpaces": false,
+    "workbench.colorTheme": "Base16 Eighties Dark",
+    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingQuotes": "always",
+    "editor.minimap.showSlider": "always",
+    "go.useLanguageServer": true,
+    "java.semanticHighlighting.enabled": true,
+    "editor.inlineHints.fontFamily": "'Cascadia Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'"
 }
